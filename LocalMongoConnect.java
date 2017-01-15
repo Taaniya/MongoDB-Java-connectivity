@@ -69,7 +69,7 @@ public class LocalMongoConnect {
            System.out.println("\n "+e.getClass()+"\n"+e.getMessage());
              
        }
-    }//main
+    }
           
     
-}//class
+}
