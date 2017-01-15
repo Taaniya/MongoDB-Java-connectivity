@@ -3,11 +3,11 @@ import java.util.Set;
 import java.util.Iterator;
 
 /*
-   In case your 32-bit MongodB gives the following error for command - mongod
+   In case your 32-bit MongodB gives the following error in your windows command prompt for command - mongod 
    exception in initAndListen: 28663 Cannot start server. The default storage engine 'wiredTiger' is not available 
    with this build of mongod. Please specify a different storage engine explicitly, e.g. --storageEngine=mmapv1., terminating
 
-   Enter this command
+   then , enter this command -
    C:\Program Files\MongoDB\Server\3.2\bin>mongod --storageEngine=mmapv1 --dbpath "C:\Program Files\MongoDB"
 */
 
@@ -50,10 +50,9 @@ public class LocalMongoConnect {
             DBObject doc = new BasicDBObject();
             doc.put("fname","Asha");
             colln.update(doc, document, true, false);
-            //colln.remove(document);
+          
             DBObject dbo;
-            
-            
+                    
             /*  Print the records in the collection   */           
             int i=1;
                while(cursor.hasNext())
