@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class RemoteMongoConnect {
     public static void main(String agrs[]){
        try {
-           MongoClientURI mongoc_uri= new MongoClientURI("mongodb://commonuser:userlistdbuser@ds149998.mlab.com:49998/userlist") ;
+           MongoClientURI mongoc_uri= new MongoClientURI("mongodb://<dbuser>:<dbpassword>@ds149998.mlab.com:49998/userlist") ;
            MongoClient mclient = new MongoClient(mongoc_uri);
            DB db = mclient.getDB("userlist");
            System.out.println("connected to the database");
