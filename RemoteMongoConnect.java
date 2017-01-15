@@ -7,10 +7,10 @@ import java.util.Iterator;
 public class RemoteMongoConnect {
     public static void main(String agrs[]){
        try {
-           MongoClientURI mongoc_uri= new MongoClientURI("mongodb://<dbuser>:<dbpassword>@ds149998.mlab.com:49998/userlist") ;
-           MongoClient mclient = new MongoClient(mongoc_uri);
-           DB db = mclient.getDB("userlist");
-           System.out.println("connected to the database");
+            MongoClientURI mongoc_uri= new MongoClientURI("mongodb://<dbuser>:<dbpassword>@ds149998.mlab.com:49998/userlist") ;
+            MongoClient mclient = new MongoClient(mongoc_uri);
+            DB db = mclient.getDB("userlist");
+            System.out.println("connected to the database");
                         
             DBCollection colln = db.getCollection("userlist");    
                          
@@ -18,7 +18,7 @@ public class RemoteMongoConnect {
                        
             DBObject dbo;
                int i=1;
-               while(cursor.hasNext())
+                while(cursor.hasNext())
                  {
                    dbo = cursor.next();
                     
@@ -32,7 +32,7 @@ public class RemoteMongoConnect {
            System.out.println("\n "+e.getClass()+"\n"+e.getMessage());
              
        }
-    }//main
+    }
           
     
-}//class
+}
